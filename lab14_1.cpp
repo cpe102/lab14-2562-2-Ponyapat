@@ -1,33 +1,28 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 
 int main(){
-	//Write your code here.
 	int a = 5;
 	char b = 'A';
-	char &c=b;
+	char &c = b;
 	int *x = &a;
 	char *y = &b;
-	int **z = &x;
-	
-	cout << "a = " << a <<endl;
-	cout << "b = " << b <<endl;
-	cout << "c = " << c <<endl;
-	cout << "x = " << x <<endl;
-	cout << "y = " << (int *)y <<endl;
-	cout << "z = " << z <<endl;
-
-	cout << "address a = " << &a <<endl;
-	cout << "address b = " << (int *)&b <<endl;
-	cout << "address c = " << (int *)&c <<endl;
-	cout << "address x = " << &x <<endl;
-	cout << "address y = " << &y <<endl;
-	cout << "address z = " << &z <<endl;
-
-	
-
-	
-	
+	int *z = x;
+	cout<<"a="<<a<<"\n"<<"b="<<b<<"\n"<<"c="<<c<<"\n"<<"x="<<x<<"\n"<<"y="<<y<<"\n"<<"z="<<z<<"\n";
+	cout<<"\n";
+	cout<<"&a="<<&a<<"\n"<<"&b="<<(void*)&b<<"\n"<<"&c="<<(void*)&c<<"\n"<<"&x="<<&x<<"\n"<<"&y="<<&y<<"\n"<<"&z="<<&z<<"\n";
+	c = 'F';
+	cout<<"\n";
+	cout<<"a="<<a<<"\n"<<"b="<<b<<"\n"<<"c="<<c<<"\n"<<"x="<<x<<"\n"<<"y="<<y<<"\n"<<"z="<<z<<"\n";
+	*y = 'W';
+	cout<<"\n";
+	cout<<"a="<<a<<"\n"<<"b="<<b<<"\n"<<"c="<<c<<"\n"<<"x="<<x<<"\n"<<"y="<<y<<"\n"<<"z="<<z<<"\n";
+	cout<<"\n";
+	*x = 6;
+	cout<<"a="<<a<<"\n"<<"b="<<b<<"\n"<<"c="<<c<<"\n"<<"x="<<x<<"\n"<<"y="<<y<<"\n"<<"z="<<z<<"\n";
+	cout<<"\n";
+	*z = 7;
+	cout<<"a="<<a<<"\n"<<"b="<<b<<"\n"<<"c="<<c<<"\n"<<"x="<<x<<"\n"<<"y="<<y<<"\n"<<"z="<<z<<"\n";
 	return 0;
 }
